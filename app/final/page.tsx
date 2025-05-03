@@ -88,21 +88,21 @@ export default function FinalPage() {
             </p>
           </motion.div>
 
-          <motion.div
+            <motion.div
             custom={1}
             variants={fadeUpVariants}
             initial="hidden"
             animate="visible"
             className="mt-6 md:mt-0 w-full md:w-64 h-40 bg-white/10 rounded-lg overflow-hidden flex-shrink-0"
-          >
+            >
             <Image
-              src="/placeholder.svg?height=160&width=256"
+              src="/images/tt-final.png"
               alt="Final Timetable"
               width={256}
               height={160}
               className="w-full h-full object-cover"
             />
-          </motion.div>
+            </motion.div>
         </div>
 
         {/* Subjects Grid */}

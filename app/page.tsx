@@ -95,11 +95,11 @@ export default function HomePage() {
                 <h2 className="text-2xl font-bold text-white mb-4">Preparatory</h2>
                 <div className="w-full h-40 bg-white/10 rounded-md mb-4 overflow-hidden">
                   <Image
-                    src="/placeholder.svg?height=160&width=320"
-                    alt="Preparatory Examination"
-                    width={320}
-                    height={160}
-                    className="w-full h-full object-cover"
+                  src="/images/TT-pREP.png"
+                  alt="Preparatory Examination"
+                  width={320}
+                  height={160}
+                  className="w-full h-full object-cover"
                   />
                 </div>
                 <p className="text-white/60 mb-4 flex-grow">
@@ -131,11 +131,11 @@ export default function HomePage() {
                 <h2 className="text-2xl font-bold text-white mb-4">Final</h2>
                 <div className="w-full h-40 bg-white/10 rounded-md mb-4 overflow-hidden">
                   <Image
-                    src="/placeholder.svg?height=160&width=320"
-                    alt="Final Examination"
-                    width={320}
-                    height={160}
-                    className="w-full h-full object-cover"
+                  src="/images/tt-final.png"
+                  alt="Final Examination"
+                  width={320}
+                  height={160}
+                  className="w-full h-full object-cover"
                   />
                 </div>
                 <p className="text-white/60 mb-4 flex-grow">
