@@ -18,9 +18,7 @@ export function PDFViewer({
   const [totalPages] = useState(5) // Mock total pages
   const [zoom, setZoom] = useState(100)
   const [isLoading, setIsLoading] = useState(false)
-
-  // Always use placeholder for preview in this demo
-  const placeholderUrl = "/placeholder.svg?height=800&width=600"
+  const [error, setError] = useState<string | null>(null)
 
   const handleShare = () => {
     if (navigator.clipboard) {
@@ -94,32 +92,18 @@ export function PDFViewer({
         </div>
 
         <div className="aspect-[4/3] w-full flex items-center justify-center bg-white/5 p-4">
-          {/* This is a placeholder for a real PDF viewer */}
-          <div
-            className="w-full h-full bg-white rounded-lg flex items-center justify-center overflow-hidden"
-            style={{ transform: `scale(${zoom / 100})`, transition: "transform 0.2s ease" }}
-          >
-            {isLoading ? (
-              <div className="flex items-center justify-center">
-                <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-indigo-500"></div>
-              </div>
-            ) : (
-              <div className="flex flex-col items-center justify-center text-center p-8">
-                <img
-                  src={placeholderUrl || "/placeholder.svg"}
-                  alt="PDF Preview"
-                  className="w-full h-full object-contain"
-                />
-                <div className="mt-4 text-gray-700">
-                  <h3 className="font-medium text-lg">{title}</h3>
-                  <p className="text-sm mt-2">This is a placeholder for the actual PDF content.</p>
-                  <p className="text-sm mt-1">
-                    In a production environment, this would display the actual PDF document.
-                  </p>
-                </div>
-              </div>
-            )}
-          </div>
+          {/* Embed the actual PDF file */}
+          <iframe
+            src={fileName}
+            className="w-full h-full rounded-lg"
+            style={{
+              transform: `scale(${zoom / 100})`,
+              transformOrigin: "center",
+              transition: "transform 0.2s ease",
+            }}
+            title={title}
+            onError={() => setError("Could not load PDF")}
+          />
         </div>
       </div>
     </div>

@@ -28,7 +28,7 @@ export function Footer() {
           <p className="text-white/60 text-center">
             Built with care by{" "}
             <Link
-              href="https://github.com/bharath"
+              href="https://bharath.studio"
               target="_blank"
               className="text-indigo-300 hover:text-indigo-200 transition-colors"
             >
